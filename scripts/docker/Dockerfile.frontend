@@ -13,9 +13,10 @@ RUN apt-get install -y git && \
     git init
 
 RUN npm install
+RUN cp -r /usr/src/app/frontend/node_modules/iD /usr/src/app/frontend/node_modules/\@hotosm/id
 
 ### Modify iD to work with out settings
-RUN cd ./node_modules/\@hotosm/id && \ 
+RUN cd /usr/src/app/frontend/node_modules/\@hotosm/id && \ 
     grep -rl '##ID_CONSUMER_KEY##' . | xargs -I {} sed -i "s/##ID_CONSUMER_KEY##/$ID_CONSUMER_KEY/" {} && \
     grep -rl '##ID_CONSUMER_SECRET##' . | xargs -I {} sed -i "s/##ID_CONSUMER_SECRET##/$ID_CONSUMER_SECRET/" {} && \
     npm install && \
