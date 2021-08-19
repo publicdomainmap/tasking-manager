@@ -1,10 +1,28 @@
 FROM tiangolo/node-frontend:10 as build
+ARG ID_CONSUMER_KEY
+ENV ID_CONSUMER_KEY $ID_CONSUMER_KEY 
+ARG ID_CONSUMER_SECRET
+ENV ID_CONSUMER_SECRET $ID_CONSUMER_SECRET
 
 WORKDIR /usr/src/app/frontend
 COPY frontend .
 
-## SETUP
+### SETUP
+# We use git for the editor repo
+RUN apt-get install -y git && \
+    git init
+
 RUN npm install
+
+### Modify iD to work with out settings
+RUN cd ./node_modules/\@hotosm/id && \ 
+    grep -rl '##ID_CONSUMER_KEY##' . | xargs -I {} sed -i "s/##ID_CONSUMER_KEY##/$ID_CONSUMER_KEY/" {} && \
+    grep -rl '##ID_CONSUMER_SECRET##' . | xargs -I {} sed -i "s/##ID_CONSUMER_SECRET##/$ID_CONSUMER_SECRET/" {} && \
+    npm install && \
+    npm run build build:legacy dist
+
+RUN cd /usr/src/app/frontend
+
 
 # SERVE
 COPY tasking-manager.env ..
