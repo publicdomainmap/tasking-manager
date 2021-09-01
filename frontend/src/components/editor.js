@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as iD from 'iD';
 import 'iD/dist/iD.css';
 
-import { OSM_CONSUMER_KEY, OSM_CONSUMER_SECRET, OSM_SERVER_URL } from '../config';
+import { OSM_CONSUMER_KEY, OSM_CONSUMER_SECRET, OSM_ID_SERVER_URL } from '../config';
 
 export default function Editor({ setDisable, comment, presets, imagery, gpxUrl }) {
   const dispatch = useDispatch();
@@ -87,7 +87,7 @@ export default function Editor({ setDisable, comment, presets, imagery, gpxUrl }
 
       let osm = iDContext.connection();
       const auth = {
-        urlroot: OSM_SERVER_URL,
+        urlroot: OSM_ID_SERVER_URL,
         oauth_consumer_key: OSM_CONSUMER_KEY,
         oauth_secret: OSM_CONSUMER_SECRET,
         oauth_token: session.osm_oauth_token,

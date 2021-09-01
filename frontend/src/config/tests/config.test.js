@@ -115,6 +115,9 @@ it('exports OSM_REGISTER_URL', () => {
 it('exports OSM_SERVER_URL', () => {
   expect(config.OSM_SERVER_URL.startsWith('https://')).toBeTruthy();
 });
+it('exports OSM_ID_SERVER_URL', () => {
+  expect(config.OSM_ID_SERVER_URL.startsWith('https://')).toBeTruthy();
+});
 it('exports ID_EDITOR_URL', () => {
   expect(config.ID_EDITOR_URL.startsWith('https://')).toBeTruthy();
 });
