@@ -6,7 +6,7 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   jumbotronTitle: {
     id: 'home.mainSection.title',
-    defaultMessage: 'Map for people in need',
+    defaultMessage: 'Map For Public Good',
   },
   jumbotronHeadLine: {
     id: 'home.mainSection.lead',
@@ -15,12 +15,14 @@ export default defineMessages({
   },
   secJumbotronTitle: {
     id: 'home.callToAction.title',
-    defaultMessage: "We can't do it without you",
+    defaultMessage: "Use Statistics",
   },
   secJumbotronHeadLine: {
     id: 'home.callToAction.firstLeadLine',
     defaultMessage:
-      'Anyone can contribute to the map. If you have never mapped before and would like to get started, visit our {link} page.',
+      `The Public Domain Mapping community is dedicated to collecting and publishing quality geospatial data that are owned by the public, and free to copy, share, alter, and republish.
+       The Public Domain Tasking Manager presents mapping needs and leverages the power of crowd sourcing to collect geospatial data.
+       The data are quality checked and then released into the Public Domain.`,
   },
   secJumbotronHeadLine2: {
     id: 'home.callToAction.secondLeadLine',
