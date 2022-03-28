@@ -16,7 +16,7 @@ function JumbotronButtons() {
   return (
     <p>
       <Link to={'explore'}>
-        <Button className="bg-red white mr3">
+        <Button className="bg-blue-dark white mr3">
           <FormattedMessage {...messages.startButton} />
         </Button>
       </Link>
@@ -55,7 +55,7 @@ export function Jumbotron() {
   const [width, height] = useWindowSize();
 
   return (
-    <div id="jumbotron" className="white relative" style={{ height: '32rem' }}>
+    <div id="jumbotron" className="blue-dark relative" style={{ height: '32rem' }}>
       <div className="truncate relative h-100">
         {HOMEPAGE_VIDEO_URL && width > 824 ? (
           <video
