@@ -57,11 +57,9 @@ export const StatsSection = () => {
 
   return (
     <div className="cf pt5 pb2 ph5-l ph4 bg-white">
-      <StatsColumn label={messages.buildingsStats} value={stats.buildings} />
-      <StatsColumn label={messages.roadsStats} value={stats.roads} />
-      <StatsColumn label={messages.editsStats} value={stats.edits} />
-      <StatsColumn label={messages.communityStats} value={tmStats.totalMappers || 0} />
-      <StatsColumn label={messages.mappersStats} value={tmStats.mappersOnline || 0} />
+      <StatsColumn label={messages.tunnelsStats} value={0} />
+      <StatsColumn label={messages.communityStats} value={0} />
+      <StatsColumn label={messages.mappersStats} value={0} />
     </div>
   );
 };

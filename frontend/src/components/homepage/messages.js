@@ -11,7 +11,7 @@ export default defineMessages({
   jumbotronHeadLine: {
     id: 'home.mainSection.lead',
     defaultMessage:
-      'Join a global community that is mapping the places most vulnerable to disaster and poverty in order to support humanitarian aid and sustainable development across the world.',
+      'Join the Public Domain Map community in improving, collecting, and publishing open geospatial data that can be used by government agencies, private industry, and nonprofits to support products and services and to better inform policy decisions.'
   },
   secJumbotronTitle: {
     id: 'home.callToAction.title',
@@ -48,6 +48,10 @@ export default defineMessages({
   buildingsStats: {
     id: 'home.stats.buildings',
     defaultMessage: 'Buildings Mapped',
+  },
+  tunnelsStats: {
+    id: 'home.stats.tunnels',
+    defaultMessage: 'Tunnels Mapped',
   },
   roadsStats: {
     id: 'home.stats.roads',
